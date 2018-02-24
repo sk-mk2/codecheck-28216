@@ -1,1 +1,1 @@
-web: node app/hello.js
+web: node app/bin/www
