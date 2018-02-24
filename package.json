@@ -1,24 +1,47 @@
 {
-  "name": "challenge-template",
-  "version": "1.0.0",
-  "description": "codecheck challenge",
-  "author": "Givery",
-  "devDependencies": {
-    "codecheck": "^0.6.0",
-    "chai": "^3.5.0",
-    "eslint": "^3.18.0"
-  },
-  "dependencies": {
-    "async": "^2.5.0",
-    "chai-http": "^3.0.0",
-    "dotenv": "^5.0.0",
-    "express": "^4.16.2",
-    "express-session": "^1.15.6",
-    "jquery": "^3.2.1",
-    "nightmare": "^2.10.0",
-    "request-promise": "^4.2.2",
-    "sync-request": "^4.1.0",
-    "then-request": "^4.1.0",
-    "valid-url": "^1.0.9"
-  }
+    "name": "challenge-template",
+    "version": "1.0.0",
+    "description": "codecheck challenge",
+    "author": "Givery",
+    "devDependencies": {
+        "codecheck": "^0.6.0",
+        "chai": "^3.5.0",
+        "eslint": "^3.18.0"
+    },
+    "dependencies": {
+        "async": "^2.5.0",
+        "chai-http": "^3.0.0",
+        "dotenv": "^5.0.0",
+        "jquery": "^3.2.1",
+        "nightmare": "^2.10.0",
+        "request-promise": "^4.2.2",
+        "sync-request": "^4.1.0",
+        "then-request": "^4.1.0",
+        "valid-url": "^1.0.9",
+        "body-parser": "~1.17.1",
+        "cookie-parser": "~1.4.3",
+        "debug": "~2.6.3",
+        "eslint-plugin-import": "^2.2.0",
+        "eslint-plugin-react": "^6.10.3",
+        "express": "~4.15.2",
+        "express-session": "^1.15.2",
+        "hbs": "~4.0.1",
+        "morgan": "~1.8.1",
+        "passport": "^0.3.2",
+        "passport-azure-ad": "^3.0.5",
+        "serve-favicon": "~2.4.2",
+        "superagent": "^3.5.2",
+        "uuid": "^3.0.1"
+
+    },
+    "devDependencies": {
+        "eslint": "^3.19.0",
+        "eslint-config-airbnb": "^14.1.0",
+        "eslint-plugin-jsx-a11y": "^4.0.0",
+        "gulp": "^3.9.1",
+        "gulp-nodemon": "^2.2.1",
+        "mocha": "^3.2.0",
+        "selenium-webdriver": "^3.3.0"
+
+    }
 }
