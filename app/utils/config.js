@@ -6,7 +6,8 @@ require('dotenv').config();
 let port = process.env.PORT || 3000;
 module.exports = {
   creds: {
-    redirectUrl: `http://localhost:${port}/token`,
+    //redirectUrl: `http://localhost:${port}/token`,
+    redirectUrl: `https://meetingtool.herokuapp.com:${port}/token`,
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     identityMetadata: 'https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration',
