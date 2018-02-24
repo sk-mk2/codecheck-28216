@@ -22,13 +22,16 @@ const app = express();
 // Note that production apps will need to create a self-signed cert and use a secure server,
 // and change dev settings marked 'For development only' in app.js and config.js.
 // Below is an example after you have the key cert pair:
-// const https = require('https');
-// const certConfig = {
-//  key: fs.readFileSync('./utils/cert/server.key', 'utf8'),
-//  cert: fs.readFileSync('./utils/cert/server.crt', 'utf8')
-// };
-// const server = https.createServer(certConfig, app);
-
+/*
+const https = require('https');
+const fs = require('fs');
+const certConfig = {
+    key: fs.readFileSync('./cert/server.key', 'utf8'),
+    cert: fs.readFileSync('./cert/server.crt', 'utf8'),
+    passphrase: 'hoge'
+};
+const server = https.createServer(certConfig, express());
+*/
 // authentication setup
 const callback = (iss, sub, profile, accessToken, refreshToken, done) => {
   done(null, {
@@ -37,7 +40,6 @@ const callback = (iss, sub, profile, accessToken, refreshToken, done) => {
     refreshToken
   });
 };
-
 passport.use(new OIDCStrategy(config.creds, callback));
 
 const users = {};
@@ -103,5 +105,6 @@ app.use(function (err, req, res) {
     error: {}
   });
 });
+
 
 module.exports = app;
