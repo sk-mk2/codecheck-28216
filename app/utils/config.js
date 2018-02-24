@@ -2,12 +2,13 @@
  * Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
  * See LICENSE in the project root for license information.
  */
-
+require('dotenv').config();
+let port = process.env.PORT || 3000;
 module.exports = {
   creds: {
-    redirectUrl: 'http://localhost:3000/token',
-    clientID: CLIENT_ID,
-    clientSecret: CLIENT_SECRET,
+    redirectUrl: `http://localhost:${port}/token`,
+    clientID: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
     identityMetadata: 'https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration',
     allowHttpForRedirectUrl: true, // For development only
     responseType: 'code',
