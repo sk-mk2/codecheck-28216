@@ -53,6 +53,7 @@ router.get('/token',
         });
     });
 
+
 // Load the sendMail page.
 function renderSendMail(req, res) {
     res.render('sendMail', {
@@ -98,6 +99,10 @@ router.post('/sendMail', (req, res) => {
     });
 });
 
+router.get('/new', (req, res) => {
+    res.send('hello, world');
+
+});
 router.get('/disconnect', (req, res) => {
     req.session.destroy(() => {
         req.logOut();

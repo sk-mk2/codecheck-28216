@@ -18,20 +18,6 @@ const config = require('./utils/config.js');
 
 const app = express();
 
-// **IMPORTANT
-// Note that production apps will need to create a self-signed cert and use a secure server,
-// and change dev settings marked 'For development only' in app.js and config.js.
-// Below is an example after you have the key cert pair:
-/*
-const https = require('https');
-const fs = require('fs');
-const certConfig = {
-    key: fs.readFileSync('./cert/server.key', 'utf8'),
-    cert: fs.readFileSync('./cert/server.crt', 'utf8'),
-    passphrase: 'hoge'
-};
-const server = https.createServer(certConfig, express());
-*/
 // authentication setup
 const callback = (iss, sub, profile, accessToken, refreshToken, done) => {
   done(null, {
@@ -69,7 +55,6 @@ app.use(session({
   name: 'graphNodeCookie',
   resave: false,
   saveUninitialized: false,
-  //cookie: {secure: true} // For development only
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(passport.initialize());

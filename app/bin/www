@@ -19,14 +19,7 @@ const http = require('http');
 
 /**
  * Create HTTP server.
-const fs = require('fs');
-
-const certConfig = {
-    key: fs.readFileSync('./cert/server.key', 'utf8'),
-    cert: fs.readFileSync('./cert/server.crt', 'utf8'),
-    passphrase: 'hoge'
-};
-*/
+ */
 const server = http.createServer(app);
 
 /**
