@@ -6,8 +6,8 @@
 
 const app = require('../app');
 const debug = require('debug')('nodejs-microsoft-graph-connect:server');
-const https = require('https');
-const fs = require('fs');
+
+
 
 /**
  * Get port from environment and store in Express.
@@ -15,17 +15,19 @@ const fs = require('fs');
 
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
+const http = require('http');
 
 /**
  * Create HTTP server.
- */
+const fs = require('fs');
+
 const certConfig = {
     key: fs.readFileSync('./cert/server.key', 'utf8'),
     cert: fs.readFileSync('./cert/server.crt', 'utf8'),
     passphrase: 'hoge'
 };
-
-const server = https.createServer(certConfig,app);
+*/
+const server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
